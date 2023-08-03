@@ -1,12 +1,12 @@
 main {
     .container {
-        
         .line {
             display: flex;
             justify-content: center;
             margin: 4rem;
 
             img {
+                width: 16rem;
                 height: 0.375rem;
                 object-fit: cover;
             }
@@ -41,14 +41,10 @@ main {
     main {
         .container {
             .line {
-                width: 100%;
-                max-width: 100%;
-                display: flex;
-                justify-content: center;
-                margin: 4rem;
-
                 img {
-                    content: url('../../imgs/desktop-dashed-line.svg');
+                    width: 87.6875rem;
+                    object-fit: cover;
+                    content: url("../../imgs/desktop-dashed-line.svg");
                 }
             }
 
