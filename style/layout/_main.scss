@@ -1,0 +1,32 @@
+main {
+    .container {
+        .line {
+            display: flex;
+            justify-content: center;
+            margin: 4rem;
+        }
+
+        .reputation {
+            .reasons {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+
+                .reasons__item {
+                    display: flex;
+                    width: 20.75rem;
+                    padding: 1.25rem 1.25rem 2.5rem 1.25rem;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 1.125rem;
+                    margin: 2.28rem 1.81rem ; 
+
+                    border-radius: 0.25rem;
+                    border: 1.4px solid var(--neutral-100, #e0e3eb);
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
