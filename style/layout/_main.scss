@@ -1,9 +1,15 @@
 main {
     .container {
+        
         .line {
             display: flex;
             justify-content: center;
             margin: 4rem;
+
+            img {
+                height: 0.375rem;
+                object-fit: cover;
+            }
         }
 
         .reputation {
@@ -20,11 +26,35 @@ main {
                     justify-content: center;
                     align-items: flex-start;
                     gap: 1.125rem;
-                    margin: 2.28rem 1.81rem ; 
+                    margin: 2.28rem 1.81rem;
 
                     border-radius: 0.25rem;
                     border: 1.4px solid var(--neutral-100, #e0e3eb);
                     background: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 108rem) {
+    main {
+        .container {
+            .line {
+                width: 100%;
+                max-width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 4rem;
+
+                img {
+                    content: url('../../imgs/desktop-dashed-line.svg');
+                }
+            }
+
+            .reputation {
+                .reasons {
+                    grid-template-columns: auto auto auto;
                 }
             }
         }
