@@ -1,34 +1,32 @@
 body {
+    line-height: normal;
+
+    font-family: Work Sans;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+
     h1 {
         text-align: center;
         margin: 1.8rem;
-        line-height: normal;
 
         color: var(--neutral-800, #292e3d);
-        font-family: Work Sans;
+
         font-size: 2.25rem;
-        font-style: normal;
         font-weight: 700;
     }
 
     h4 {
         color: var(--neutral-700, #3d445c);
-        font-family: Work Sans;
-        font-size: 20px;
-        font-style: normal;
+
+        font-size: 1.25rem;
         font-weight: 700;
-        line-height: normal;
     }
 
     p {
-        line-height: normal;
-
         color: var(--neutral-400, #858ead);
 
-        /* Caption */
-        font-family: Work Sans;
         font-size: 1rem;
-        font-style: normal;
         font-weight: 400;
     }
 }
