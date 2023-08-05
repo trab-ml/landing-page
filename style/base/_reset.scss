@@ -58,6 +58,14 @@ table {
     padding: 0;
     box-sizing: border-box;
 }
-a, button:hover, img:hover {
+a, button:hover, img:hover, select:hover, input[type='file']:hover {
 	cursor: pointer;
 }
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+// input[type='text']:hover{} cursor: write mode...
