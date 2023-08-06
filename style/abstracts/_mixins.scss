@@ -1,0 +1,9 @@
+@mixin inputTypography {
+    font-size: 1.125rem;
+
+    border-radius: 0.25rem;
+    border: 1px solid var(--neutral-100, #e0e3eb);
+
+    color: var(--neutral-300, #a3aac2);
+    background: #fff;
+}

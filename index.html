@@ -7,7 +7,20 @@
         <link rel="stylesheet" href="style/main.css" />
     </head>
     <body>
-        <header></header>
+        <header>
+            <div class="container">
+                <div class="logo"></div>
+
+                <div class="burger-menu"></div>
+
+                <nav>
+                    <ul>
+                        <li> <a href="#"></a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
         <main>
             <div class="container">
                 <div class="line">
@@ -102,7 +115,7 @@
                             <li><a href="#">Residential</a></li>
                             <li><a href="#">Other</a></li>
                         </ul>
-    
+
                         <div class="projects">
                             <div class="projects__item">
                                 <div class="img-container">
@@ -111,7 +124,7 @@
                                         alt="project n°1"
                                     />
                                 </div>
-    
+
                                 <div class="info">
                                     <h4>Wildstone Infra Hotel</h4>
                                     <p class="adress">
@@ -119,7 +132,7 @@
                                     </p>
                                 </div>
                             </div>
-    
+
                             <div class="projects__item">
                                 <div class="img-container">
                                     <img
@@ -127,7 +140,7 @@
                                         alt="project n°2"
                                     />
                                 </div>
-    
+
                                 <div class="info">
                                     <h4>Wish Stone Building</h4>
                                     <p class="adress">
@@ -135,7 +148,7 @@
                                     </p>
                                 </div>
                             </div>
-    
+
                             <div class="projects__item">
                                 <div class="img-container">
                                     <img
@@ -143,7 +156,7 @@
                                         alt="project n°3"
                                     />
                                 </div>
-    
+
                                 <div class="info">
                                     <h4>Mr. Parkinston's House</h4>
                                     <p class="adress">
@@ -151,7 +164,7 @@
                                     </p>
                                 </div>
                             </div>
-    
+
                             <div class="projects__item">
                                 <div class="img-container">
                                     <img
@@ -159,15 +172,15 @@
                                         alt="project n°4"
                                     />
                                 </div>
-    
+
                                 <div class="info">
                                     <h4>Oregano Height</h4>
                                     <p class="adress">
-                                        2464 Royal Ln. Mesa, New Jersey 
+                                        2464 Royal Ln. Mesa, New Jersey
                                     </p>
                                 </div>
                             </div>
-    
+
                             <div class="btn back-btn">
                                 <svg
                                     width="26"
@@ -184,13 +197,13 @@
                                         fill="white"
                                     />
                                 </svg>
-    
+
                                 Back
                             </div>
-    
+
                             <div class="btn next-btn">
                                 Next
-    
+
                                 <svg
                                     width="26"
                                     height="18"
@@ -240,22 +253,96 @@
 
                 <section class="contact-us">
                     <h2>What can us do for you?</h2>
-                    <p class="txt">We are ready to work on a project of any complexity, whether it’s commercial or residential.</p>
+                    <p class="txt">
+                        We are ready to work on a project of any complexity,
+                        whether it’s commercial or residential.
+                    </p>
 
                     <form>
-                        <input type="text" name="username" placeholder="Your Name*" class="form__elt" />
-                        <input type="text" name="email" placeholder="Your Email*" class="form__elt" />
-                        <select class="form__elt">
-                            <option selected value="">Reason for Contacting*</option>
-                            <option value="appoitement">Appointement</option>
-                            <option value="report">Report</option>
-                            <option value="work">Work with us</option>
-                        </select>
-                        <input type="tel" name="phone" placeholder="Phone*" class="form__elt" />
-                        <input type="file" name="filename" placeholder="Aucun fichier choisi."  class="form__elt"/>
+                        <div class="input-box">
+                            <input
+                                type="text"
+                                name="username"
+                                placeholder="Your Name"
+                                class="form__elt"
+                            />
+                            <span class="required-sign">*</span>
+                        </div>
+
+                        <div class="input-box">
+                            <input
+                                type="text"
+                                name="email"
+                                placeholder="Your Email"
+                                class="form__elt"
+                            />
+                            <span class="required-sign">*</span>
+                        </div>
+
+                        <div class="select-box">
+                            <select class="form__elt">
+                                <option selected value="">
+                                    Reason for Contacting
+                                </option>
+                                <option value="appoitement">
+                                    Appointement
+                                </option>
+                                <option value="report">Report</option>
+                                <option value="work">Work with us</option>
+                            </select>
+
+                            <span class="required-sign">*</span> 
+                            <!-- try option:after -->
+                        </div>
+
+                        <div class="input-box">
+                            <input
+                                type="tel"
+                                name="phone"
+                                placeholder="Phone"
+                                class="form__elt"
+                            />
+                        </div>
+
+                        <div class="input-file-box">
+                            <div class="icon-box">
+                                <svg
+                                    width="14"
+                                    height="14"
+                                    viewBox="0 0 14 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        id="Vector"
+                                        d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </div>
+
+                            <input
+                                type="file"
+                                id="filename"
+                                name="filename"
+                                class="hidden"
+                            />
+                            <label for="filename">Aucun fichier choisi</label>
+                        </div>
+
                         <textarea class="form__elt">Message</textarea>
-                        <p class="info-about-form"><span class="required-sign">*</span> indicates a required field</p>
-                        <input type="submit" name="submit" value="Submit" class="btn form__elt submit-btn" />
+
+                        <p class="info-about-form">
+                            <span class="required-sign">*</span> indicates a
+                            required field
+                        </p>
+
+                        <input
+                            type="submit"
+                            name="submit"
+                            value="Submit"
+                            class="btn form__elt submit-btn"
+                        />
                     </form>
                 </section>
 

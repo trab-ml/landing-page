@@ -14,6 +14,8 @@ main {
 
         // reputation section
         .reputation {
+            margin: 4rem 4rem 0;
+
             .reasons {
                 display: grid;
                 grid-template-columns: auto;
@@ -72,7 +74,6 @@ main {
                 }
 
                 .projects {
-                    
                     display: grid;
                     justify-content: center;
                     gap: 1.88rem;
@@ -141,8 +142,7 @@ main {
             .txt {
                 width: 20.5rem;
                 text-align: center;
-                // margin: 0 auto;
-                // padding: 0 1rem;
+                margin: 0 auto;
 
                 color: var(--neutral-800, #292e3d);
 
@@ -155,17 +155,101 @@ main {
                 margin: 3.5rem 0;
 
                 .form__elt {
-                    margin-top: 1.25rem;
                     width: 20.75rem;
+                    margin-top: 1.25rem;
                     padding: 0.625rem 0.5rem;
 
-                    font-size: 1.125rem;
+                    @include inputTypography;
+                }
 
+                .input-box {
+                    position: relative;
+                    height: 2.5rem;
+                    margin-top: 1.25rem;
+                    
                     border-radius: 0.25rem;
-                    border: 1px solid var(--neutral-100, #e0e3eb);
 
-                    color: var(--neutral-300, #a3aac2);
-                    background: #fff;
+                    input {
+                        display: flex;
+                        flex-direction: row;
+                        margin: 0;
+                        outline: none;
+
+                        @include inputTypography;
+
+                        &:focus {
+                            outline: 2px solid #000;
+                        }
+                    }
+
+                    .required-sign {
+                        position: absolute;
+                        top: 0.7rem;
+                        left: 6.3rem;
+                    }
+                }
+
+                .select-box {
+                    position: relative;
+
+                    .required-sign {
+                        position: absolute;
+                        top: 2rem;
+                        left: 12rem;
+                    }
+
+                    select {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+
+                        // padding-right: 2rem !important; doesn't work
+
+                        background: url(../../imgs/arrow-drop-down.svg) no-repeat 60px;
+                        background-position: right;
+
+                        color: var(--neutral-300, #a3aac2);
+                    }
+                }
+
+                .input-file-box {
+                    position: relative;
+                    width: 20.75rem;
+                    height: 3rem;
+                    margin-top: 1.25rem;
+                    display: flex;
+                    align-items: center;
+
+                    @include inputTypography;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    .icon-box {
+                        width: 30%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        border-radius: 0.25rem 0rem 0rem 0.25rem;
+
+                        background: #2947a9;
+                    }
+
+                    label {
+                        width: 70%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        padding-left: 1rem;
+
+                        font-size: 1.125rem;
+
+                        cursor: pointer;
+                    }
                 }
 
                 input[type="submit"] {
@@ -180,16 +264,22 @@ main {
                     width: 20.75rem;
                     height: 8.4375rem;
                     padding: 0.625rem 0.5rem;
+
+                    resize: none;
+
+                    &:focus {
+                        outline: 2px solid #000;
+                    }
                 }
 
                 .info-about-form {
                     margin: 0.5rem 0;
 
                     color: var(--neutral-500, #667299);
+                }
 
-                    .required-sign {
-                        color: #c40303;
-                    }
+                .required-sign {
+                    color: #c40303;
                 }
             }
         }
@@ -201,6 +291,8 @@ main {
     main {
         .container {
             .line {
+                // margin: 4rem 0;
+
                 img {
                     width: 70rem;
                     object-fit: cover;
@@ -257,9 +349,8 @@ main {
 
             .contact-us {
                 margin: 4rem;
-    
+
                 .txt {
-                    margin: 0 auto;
                     padding: 0 1rem;
                 }
             }
