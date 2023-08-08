@@ -90,6 +90,14 @@ body {
   font-style: normal;
   font-weight: 400;
 }
+body h1 {
+  color: var(--neutral-800, #292e3d);
+  font-family: Work Sans;
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 body h2 {
   text-align: center;
   margin: 1.8rem;
@@ -122,9 +130,6 @@ body p {
   cursor: pointer;
 }
 
-header {
-  border: 1px solid pink;
-}
 header .first-container {
   display: flex;
   justify-content: space-between;
@@ -132,7 +137,6 @@ header .first-container {
   width: 95%;
   height: 5rem;
   margin: 0 auto;
-  border: 1px solid red;
 }
 header .first-container .logo {
   display: flex;
@@ -167,9 +171,66 @@ header .first-container .right-side nav ul li a.active {
   color: var(--secondary, #f9995d);
 }
 header .snd-container {
-  border: 6px solid #53c836;
+  position: relative;
   width: 100%;
   height: calc(100vh - 5rem);
+}
+header .snd-container img {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .snd-container .txt {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: calc(100vh - 5rem);
+  left: 10%;
+}
+header .snd-container .txt .mission {
+  position: relative;
+  width: 38%;
+  height: 10.5rem;
+  top: calc(50% - 10.5rem);
+}
+header .snd-container .txt .future-project {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  width: 25%;
+  height: 11rem;
+  text-align: center;
+  background: #3559c7;
+}
+header .snd-container .txt .future-project h6,
+header .snd-container .txt .future-project p {
+  padding: 1.25rem 0.625rem 0.625rem 0.625rem;
+  border-radius: 0.125rem 0.125rem 0rem 0rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--neutral-white, #fff);
+}
+header .snd-container .txt .future-project h6 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+header .snd-container .txt .future-project p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+header .snd-container .txt .future-project .pagination {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+header .snd-container .txt .future-project .pagination .btn {
+  width: 40%;
+  height: 2.5rem;
 }
 
 @media screen and (min-width: 72rem) {
@@ -177,6 +238,9 @@ header .snd-container {
     display: none;
   }
   header .first-container .right-side nav {
+    display: block;
+  }
+  header .snd-container .txt .future-project {
     display: block;
   }
 }

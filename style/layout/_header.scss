@@ -1,6 +1,4 @@
 header {
-    border: 1px solid pink;
-
     .first-container {
         display: flex;
         justify-content: space-between;
@@ -8,8 +6,6 @@ header {
         width: 95%;
         height: $header-fst-sct-height;
         margin: 0 auto;
-
-        border: 1px solid red;
 
         .logo {
             display: flex;
@@ -55,10 +51,83 @@ header {
     }
 
     .snd-container {
-        border: 6px solid #53c836;
+        position: relative;
 
         width: 100%;
-        height: calc(100vh - 5rem);
+        height: calc(100vh - $header-fst-sct-height);
+
+        img {
+            width: 100%;
+            height: calc(100vh - $header-fst-sct-height);
+            object-fit: cover;
+        }
+
+        .txt {
+            position: absolute;
+            top: 0;
+
+            width: 80%;
+            height: calc(100vh - $header-fst-sct-height);
+            left: 10%;
+
+            .mission {
+                $eltHeight: 10.5rem;
+
+                position: relative;
+
+                width: 38%;
+                height: $eltHeight;
+                top: calc(50% - $eltHeight);
+            }
+
+            .future-project {
+                display: none;
+                position: absolute;
+                bottom: 0;
+                left: 60%;
+                width: 25%;
+                height: 11rem;
+                text-align: center;
+                
+                background: #3559c7;
+
+                h6,
+                p {
+                    padding: 1.25rem 0.625rem 0.625rem 0.625rem;
+
+                    border-radius: 0.125rem 0.125rem 0rem 0rem;
+
+                    font-size: 1.25rem;
+                    font-weight: 700;
+
+                    color: var(--neutral-white, #fff);
+                }
+
+                h6 {
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+
+                .pagination {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+
+                    .btn {
+                        width: 40%;
+                        height: 2.5rem;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -70,8 +139,16 @@ header {
                 .burger-menu {
                     display: none;
                 }
-       
+
                 nav {
+                    display: block;
+                }
+            }
+        }
+
+        .snd-container {
+            .txt {
+                .future-project {
                     display: block;
                 }
             }
