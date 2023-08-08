@@ -1,0 +1,80 @@
+header {
+    border: 1px solid pink;
+
+    .first-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        height: $header-fst-sct-height;
+        margin: 0 auto;
+
+        border: 1px solid red;
+
+        .logo {
+            display: flex;
+            gap: 0.88rem;
+            align-items: center;
+            width: 13rem;
+
+            .our-name {
+                color: var(--primary, #2947a9);
+                font-family: "Work Sans";
+                font-size: 1.875rem;
+                font-style: italic;
+                font-weight: 700;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .right-side {
+            display: flex;
+
+            nav {
+                display: none;
+
+                ul {
+                    display: flex;
+                    gap: 3.12rem;
+
+                    li {
+                        a {
+                            text-transform: capitalize;
+
+                            &.active {
+                                color: var(--secondary, #f9995d);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .snd-container {
+        border: 6px solid #53c836;
+
+        width: 100%;
+        height: calc(100vh - 5rem);
+    }
+}
+
+// on larger screen
+@media screen and (min-width: 72rem) {
+    header {
+        .first-container {
+            .right-side {
+                .burger-menu {
+                    display: none;
+                }
+
+                nav {
+                    display: block;
+                }
+            }
+        }
+    }
+}
